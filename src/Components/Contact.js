@@ -13,8 +13,6 @@ const Contact = () => {
     message: ""
   });
 
-  const [selectedSubject, setSelectedSubject] = useState("");
-
   // Lightweight scroll-reveal using IntersectionObserver
   useEffect(() => {
     const revealTargets = document.querySelectorAll('[data-aos], [data-reveal]');
@@ -47,7 +45,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
     console.log("Form submitted:", formData);
     alert("Thank you for your message! We'll get back to you soon.");
     setFormData({
@@ -264,19 +261,19 @@ const Contact = () => {
               <div className="quick-icon">💬</div>
               <h3>Live Chat</h3>
               <p>Chat with our team for instant support</p>
-              <a href="#" className="quick-link">Start Chat</a>
+              <button type="button" className="quick-link">Start Chat</button>
             </div>
             <div className="quick-contact-card">
               <div className="quick-icon">📋</div>
               <h3>Request Quote</h3>
               <p>Get a customized quote for your needs</p>
-              <a href="#" className="quick-link">Get Quote</a>
+              <button type="button" className="quick-link">Get Quote</button>
             </div>
             <div className="quick-contact-card">
               <div className="quick-icon">📞</div>
               <h3>Call Back</h3>
               <p>Request a call back at your convenience</p>
-              <a href="#" className="quick-link">Schedule Call</a>
+              <button type="button" className="quick-link">Schedule Call</button>
             </div>
             <div className="quick-contact-card">
               <div className="quick-icon">📧</div>
